@@ -25,7 +25,7 @@
                 <label for="edealLink">Desired Link:</label>
                 <input type="text" id="edealLink" name="link" class="form-control" value="">
                 <input type="button" id="saveNewEdeal" class="btn btn-success btn-lg" value="SAVE">
-                <input type="button" id="cancelNewEdeal" class="btn btn-danger btn-lg" value="CANCEL">
+                <input type="button" id="cancelNewEdeal" class="btn btn-warning btn-lg" value="CANCEL">
             </div>
         </form>
     </div>
