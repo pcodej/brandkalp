@@ -19,4 +19,9 @@
             $responseAfterSave = $this->EdealModel->edealSave($edealDataToSave);
             echo json_encode($responseAfterSave);
         }
+        public function getEdeals(){
+            $this->load->model('admin/EdealModel');
+            $allEdeals = $this->EdealModel->getEdeals();
+            echo json_encode($allEdeals);
+        }
     }
