@@ -24,7 +24,7 @@
                 echo '<div class="alert alert-info" role="alert"><div class="alert alert-warning">
                 <span>'.$eachDeal['title'].'</span></div>
                 <p>'.$eachDeal['description'].'</p>
-                <a href="'.$eachDeal['description'].'" target="_blank">'.$eachDeal['link'].'</a>
+                <a href="'.$eachDeal['description'].'" target="_blank" style="text-decoration: underline;">'.$eachDeal['link'].'</a>
             </div>';
             }
         ?>
