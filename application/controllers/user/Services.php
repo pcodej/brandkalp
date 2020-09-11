@@ -5,6 +5,8 @@ class Services extends CI_Controller {
     
     public function servicePageView(){
         $this->load->view("head.php");
+        $this->load->view('header.php');
         $this->load->view("user/services.php");
+        $this->load->view('footer.php');
     }
 }
