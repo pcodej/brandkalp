@@ -113,7 +113,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li id="nav-notify"><a href=""><img src="https://img.icons8.com/bubbles/50/000000/appointment-reminders.png" id="bell-icon" /><span class="notification-count"></span></a></li>
+                    <li id="nav-notify"><a href="<?php echo base_url() ?>user/notification/view_notifications"><img src="https://img.icons8.com/bubbles/50/000000/appointment-reminders.png" id="bell-icon" /><span class="notification-count"></span></a></li>
                     <li id="nav-home"><a href="<?php echo base_url() ?>user/home/homePage">Home</a></li>
                     <li id="nav-services"><a href="<?php echo base_url() ?>user/services/servicePageView">Services</a></li>
                     <li id="nav-edeal"><a href="<?php echo base_url() ?>user/edeal/getEdeals">E-Deals</a></li>

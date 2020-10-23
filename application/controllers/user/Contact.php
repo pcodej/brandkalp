@@ -37,16 +37,16 @@ class Contact extends CI_Controller
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'infobrandkalp@gmail.com';
-            $mail->Password = '@Apoorv1';
+            $mail->Username = 'brandkalp@gmail.com';
+            $mail->Password = 'Start@2020';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
-            $mail->setFrom('infobrandkalp@gmail.com', 'BrandKalp');
+            $mail->setFrom('brandkalp@gmail.com', 'BrandKalp');
             //$mail->addReplyTo('info@example.com', 'CodexWorld');
 
             // Add a recipient
-            $mail->addAddress("infobrandkalp@gmail.com"); //admin who receives mail
+            $mail->addAddress("brandkalp@gmail.com"); //admin who receives mail
 
             // Add cc or bcc 
             //$mail->addCC('cc@example.com');

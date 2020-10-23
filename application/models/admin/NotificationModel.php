@@ -11,7 +11,7 @@ class NotificationModel extends CI_Model
 
     public function notificationSave($notification_data)
     {
-        $arr_insert = array("title" => $notification_data['title'], "description" => $notification_data['description'], "type" => $notification_data['notifyPriority']);
+        $arr_insert = array("title" => $notification_data['title'], "description" => $notification_data['description'], "type" => $notification_data['notifyPriority'], "link" => $notification_data['link']);
         $this->db->insert('notifications', $arr_insert);
         if ($this->db->affected_rows() > 0) {
             return array("status" => TRUE, "message" => "Notification Added Successfully !!");

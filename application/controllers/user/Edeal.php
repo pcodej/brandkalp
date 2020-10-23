@@ -45,7 +45,7 @@ class Edeal extends CI_Controller
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = ' infobrandkalp@gmail.com';
-            $mail->Password = '@Apoorv1';
+            $mail->Password = 'Start@2020';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
@@ -103,7 +103,7 @@ class Edeal extends CI_Controller
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = ' infobrandkalp@gmail.com';
-            $mail->Password = '@Apoorv1';
+            $mail->Password = 'Start@2020';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 

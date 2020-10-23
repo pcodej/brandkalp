@@ -38,6 +38,8 @@ body {
     font-size: 25px;
     color: #f3f0f0;
     opacity: 0.6;
+    text-shadow: 2px 2px #000000;
+        font-weight: bold;
 }
 
 /* #head-para {
@@ -104,9 +106,11 @@ button:hover {
     }
     #head-bottom-line-div {
         text-align: center;
-        padding-top: 580px;
+        padding-top: 600px;
         font-size: 20px;
-        color: darkgray;
+        color: #ecf4f3;
+        text-shadow: 2px 2px #000000;
+        font-weight: bold;
     }
     #head-subtitle-div {
         text-align: center;

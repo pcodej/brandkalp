@@ -33,7 +33,7 @@
     </div>
     <div class="row">        
         <form action="edealSave" method="POST" enctype="multipart/form-data" id="edealForm">
-            <h1>ADD NEW E-DEAL</h1>
+            <h1 id="formHeading">ADD NEW E-DEAL</h1>
             <div class="form-group" id="edealFormSection">
                 <label for="edealTitle">Edeal Title:</label>
                 <input type="text" id="eDealTitle" name="title" class="form-control" value="">
@@ -43,12 +43,14 @@
                 <input type="text" id="edealLink" name="link" class="form-control" value="">
                 <label for="productImg">Product Image:</label>
                 <input type="file" id="productImg" name="productImg" class="form-control">
+                <img scr="" id="productImgDisplay" name="productImgDisplay" data-pimage="" class="form-control" style="display:none;width:50%;height:100%;">
                 <label for="mrpActual">Actual Price:</label>
                 <input style="width:50%;" type="text" id="mrpActual" name="mrpActual" class="form-control" value="">
                 <label for="mrpOffer">Offer Price:</label>
                 <input style="width:50%;" type="text" id="mrpOffer" name="mrpOffer" class="form-control" value="">
                 <label for="precentDiscount">Percent OFF Value:</label>
                 <input  style="width:50%;" type="text" id="precentDiscount" name="precentDiscount" class="form-control" value="">
+                <input type="hidden" id="edealID" name="edealID" class="form-control" value="">
                 <input type="submit" id="saveNewEdeal" class="btn btn-success btn-lg" value="SAVE">
                 <input type="button" id="cancelNewEdeal" class="btn btn-warning btn-lg" value="CANCEL">
             </div>
@@ -60,6 +62,7 @@
             <thead>
             <tr class="success">
                 <th>Title</th>
+                <th>Edit</th>
                 <th>Image</th>
                 <th>Remove</th>
                 <th></th>

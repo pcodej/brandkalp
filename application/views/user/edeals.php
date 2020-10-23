@@ -177,7 +177,7 @@ $this->load->helper('url');
                   <a href="' . $eachDeal['link'] . '" target="_blank" style="text-decoration: underline;"><button style="background-color:#2fc4b2;color: black;font-weight:bold;width:100%;" class="btn">Avail Offer</button></a>
                 </div>
                 <div class="col-md-12" id="priceSec">
-                  <span>Price:<br/> Rs.<span style="color:green;font-size:30px;">' . $eachDeal['offer_price'] . '</span><strike><span style="color:red;"> ' . $eachDeal['actual_price'] . '</span></strike></span>                                
+                  <span> Rs.<span style="color:green;font-size:30px;">' . $eachDeal['offer_price'] . '</span><strike><span style="color:red;"> ' . $eachDeal['actual_price'] . '</span></strike></span>                                
                 </div>                
             </div>';
     }
@@ -239,6 +239,7 @@ $this->load->helper('url');
             <ul style="font-size: 10px;">
               <li>You will receive cashback only after the return period applicable on your purchased product is over.</li>
               <li>Cashback amount may vary depending upon the product.</li>
+              <li>You’re eligible to claim cashback only if you place order with brandkalp link</li>
             </ul>
           </p>
         </div>

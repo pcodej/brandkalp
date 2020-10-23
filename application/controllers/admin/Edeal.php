@@ -29,7 +29,7 @@ class Edeal extends CI_Controller
 
     public function edealSave()
     {
-        $edealDataToSave = $this->input->post();
+        $edealDataToSave = $this->input->post();        
         $edealDataToSave["prod_image_data"] = $_FILES;
         $this->load->model('admin/EdealModel');
         $responseAfterSave = $this->EdealModel->edealSave($edealDataToSave);
@@ -37,14 +37,19 @@ class Edeal extends CI_Controller
             header("refresh:0.5;url=" . base_url() . "admin/edeal/edealView");
             echo "<script> alert('Saved successfully !!')</script>";
         } else {
-            echo "<script> alert('Failed to save Mail. Try again !!')</script>";
+            echo "<script> alert('Failed to save. Try again !!')</script>";
             header("refresh:0.5;url=" . base_url() . "admin/edeal/edealView");
         }
     }
     public function getEdeals()
     {
+        if($this->input->get('edeal_id') != null){
+            $edealId = $this->input->get('edeal_id');
+        }else{
+            $edealId = "";
+        }
         $this->load->model('admin/EdealModel');
-        $allEdeals = $this->EdealModel->getEdeals();
+        $allEdeals = $this->EdealModel->getEdeals($edealId);
         echo json_encode($allEdeals);
     }
     public function list_product_links()

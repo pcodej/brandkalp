@@ -113,7 +113,7 @@
                 <h2>Contact Info:</h2>
                 <label for="">Address:</label>
                 <p>Sector 52 Noida UP
-                    <br>Contact no. : +91 9199-375-197 [ Also Connect On Whatsup Here ]
+                    <br>Contact no. : +91 9199375197 <a href="https://api.whatsapp.com/message/2DAG3YW5HAMTO1" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size:30px;color:green"></i></a>
                 </p>
                 <label for="">Get In Touch On:</label>
                 <div class="row" id="socialImgSec">

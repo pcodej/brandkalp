@@ -39,6 +39,8 @@
                 <input type="text" id="notificationTitle" name="title" class="form-control" value="">
                 <label for="notificationDesc">Description:</label>
                 <textarea id="notificationDesc" name="description" class="form-control"></textarea>
+                <label for="notifyLink">Desired Link:</label>
+                <input type="text" id="notifyLink" name="link" class="form-control" value="">
                 <label for="notificationType">Notification Priority:</label>
                 <div class="radio">
                     <label>
@@ -46,7 +48,7 @@
                         Regular Notification
                     </label>
                 </div>
-                <div class="radio">
+                <!-- <div class="radio">
                     <label>
                         <input type="radio" name="notifyPriority" id="infoNotify" value="primary">
                         Informative Notification
@@ -63,7 +65,7 @@
                         <input type="radio" name="notifyPriority" id="offerNotify" value="success">
                         Offers Notification
                     </label>
-                </div>
+                </div> -->
                 <div class="radio">
                     <label>
                         <input type="radio" name="notifyPriority" id="vryImpNotify" value="danger">

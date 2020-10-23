@@ -12,15 +12,24 @@ class EdealModel extends CI_Model
     {
         try {
             $array_to_save_data = array('title' => $edealDataToSave['title'], 'link' => $edealDataToSave['link'], 'actual_price' => $edealDataToSave['mrpActual'], 'offer_price' => $edealDataToSave['mrpOffer'], 'offer_percent' => $edealDataToSave['precentDiscount']);
-            $this->db->insert('edeals', $array_to_save_data);
-            if ($this->db->affected_rows() > 0) {
+            if(isset($edealDataToSave['edealID']) && $edealDataToSave['edealID']!=""){
+                $this->db->update('edeals', $array_to_save_data, array('id'=>$edealDataToSave['edealID']));
+                $edeal_id = $edealDataToSave['edealID'];
+            }else{
+                $this->db->insert('edeals', $array_to_save_data);
                 $edeal_id = $this->db->insert_id();
+            }
+            
+            if ($this->db->affected_rows() > 0 || (isset($edealDataToSave['edealID']) && $edealDataToSave['edealID']!="")) {                
                 if ($edealDataToSave['prod_image_data']['productImg']['name'] != "") {
                     $extention = explode('.', $edealDataToSave['prod_image_data']['productImg']['name']);
                     $edealDataToSave['prod_image_data']['productImg']['name'] = "item_img_" . $edeal_id . "." . $extention[1];
                     $image_name = $edealDataToSave['prod_image_data']['productImg']['name'];
                     $destination_path = getcwd() . DIRECTORY_SEPARATOR;
                     $target_path = $destination_path . "assets/images/edeal_products/" . basename($image_name);
+                    if(file_exists($target_path)){
+                        unlink($target_path);
+                    }
                     move_uploaded_file($edealDataToSave['prod_image_data']['productImg']['tmp_name'], $target_path);
                     $this->db->update('edeals', array('image' => $edealDataToSave['prod_image_data']['productImg']['name']), array('id' => $edeal_id));
                 }
@@ -33,9 +42,12 @@ class EdealModel extends CI_Model
             return $e->getMessage();
         }
     }
-    public function getEdeals()
+    public function getEdeals($edealId)
     {
         try {
+            if($edealId != ""){
+                $this->db->where('id',$edealId);
+            }
             $allEdeals = $this->db->get('edeals');
             return $allEdeals->result_array();
         } catch (Exception $e) {
